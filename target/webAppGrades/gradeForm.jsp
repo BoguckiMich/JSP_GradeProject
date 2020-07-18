@@ -12,15 +12,21 @@
 </head>
 <body>
 <form action="gradeSubmitHandler.jsp" method="post">
-    <label for="id">Id:</label>
-    <input id="id" name="id" type="number"><br/>
-    <label for="value">Vlue:</label>
+    <label for="value">Value:</label>
     <input id="value" name="value" type="number"><br/>
+    <label for="gradeSubject">Subjec:</label>
+    <select name="gradeSubject" id="gradeSubject">
+        <option name="English" value="ENGLISH">English</option>
+        <option name="Polish" value="POLISH">Polish</option>
+        <option name="IT" value="IT">It</option>
+        <option name="Math" value="MATH">Math</option>
+    </select><br/>
     <label for="corrected">Corrected </label>
     <input id="corrected" name="corrected" type="checkbox"><br/>
+    <input type="dateAdded" name="dateAdded">
     <input type="submit">
 
+    </form>
     <jsp:include page="/navigator.jsp"/>
-</form>
 </body>
 </html>

@@ -15,10 +15,10 @@
     <a href="index.jsp">Home</a>
 </li>
 <li>
-    <a href="gradeForm.jsp">Add new student</a>
+    <a href="gradeForm.jsp">Add new grade</a>
 </li>
 <li>
-    <a href="gradeList.jsp">List of students</a>
+    <a href="gradeList.jsp">List of grades</a>
 </li>
 </body>
 </html>
