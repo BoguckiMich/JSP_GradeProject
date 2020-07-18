@@ -1,4 +1,6 @@
-<%--
+<%@ page import="com.sda.JavaGda34.wevAppGrades.Grade" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
   User: Pichael
   Date: 7/18/2020
@@ -11,6 +13,7 @@
     <title>Navigator</title>
 </head>
 <body>
+
 <li>
     <a href="index.jsp">Home</a>
 </li>

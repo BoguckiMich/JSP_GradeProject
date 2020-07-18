@@ -1,6 +1,8 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.sda.JavaGda34.wevAppGrades.Grade" %>
-<%@ page import="java.util.ArrayList" %><%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="com.sda.JavaGda34.wevAppGrades.GradeSubject" %>
+<%@ page import="java.time.LocalDateTime" %><%--
   Created by IntelliJ IDEA.
   User: Pichael
   Date: 7/18/2020
@@ -14,19 +16,18 @@
 </head>
 <body>
 <%
-//    Long id;
-//    if(id == null){
-//        id += 1;
-//    } else {
-//        id =(long) 1;
-//    }
 
     String value = request.getParameter("value");
+    String id = request.getParameter("id");
     String subject = request.getParameter("gradeSubject");
     String corrected = request.getParameter("corrected");
-
     Grade grade = Grade.builder()
-            .id(id)
+            .id(Long.parseLong(id))
+            .value(Double.parseDouble(value))
+            .przedmiot(GradeSubject.valueOf(subject))
+            .corrected(corrected != null && corrected.equalsIgnoreCase("on"))
+            .dateAdded(LocalDateTime.now())
+            .build();
 
     Object gradeListResult =  session.getAttribute("gradeList");
     List<Grade> gradeList;
